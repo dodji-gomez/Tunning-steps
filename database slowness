@@ -3,3 +3,5 @@ To diagnose performance issues, follow these steps:
 Step 1: Identify the time window.
 Step 2: Isolate the largest consumers of database time.
 Step 3: Identify the Oracle Application Express workspace and application.
+Step 4: Correlate the offending SQL with a specific location within the application.
+Once you have identified the slow running pages, you should run the application in debug mode to identify the specific components consuming the most time.
