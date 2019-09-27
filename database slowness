@@ -1,0 +1,5 @@
+A- Diagnosing Performance Issues
+To diagnose performance issues, follow these steps:
+Step 1: Identify the time window.
+Step 2: Isolate the largest consumers of database time.
+Step 3: Identify the Oracle Application Express workspace and application.
