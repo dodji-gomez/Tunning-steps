@@ -5,3 +5,8 @@ Step 2: Isolate the largest consumers of database time.
 Step 3: Identify the Oracle Application Express workspace and application.
 Step 4: Correlate the offending SQL with a specific location within the application.
 Once you have identified the slow running pages, you should run the application in debug mode to identify the specific components consuming the most time.
+About Debugging Problematic SQL Queries
+If your query does not seem to be running correctly, try running it in SQL*Plus, SQL Developer, or in SQL Commands. Any of these approaches will test your query outside the context of your application, making it easier to define the problem.
+
+23.2.4 About Addressing Slow Queries
+For optimized queries that still take more than a second to process, consider implementing a progress bar and preventing multiple page submissions. Users expect instant results and often resubmit a page if it does not return immediately. Unless managed properly, each page submission instigates a new session in the database and continues until completion. Multiple page submissions often degrade performance and may lead to database locks. This is especially true with interactive reports. As an alternative approach, try using Oracle Application Express collections to hold query results. By using collections, expensive and time consuming queries are only executed once for each user rather than each time they perform pagination or create a filter.
